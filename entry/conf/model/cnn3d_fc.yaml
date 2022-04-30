@@ -1,0 +1,13 @@
+# @package model
+
+name: ResNeXt3D50
+input_size: None
+downscale: false
+input_channels: 1
+output_channels: 3
+fe:
+  l1_stride: 2
+pretrained: false
+path_pretrained:
+restore_weights: false
+debug: false

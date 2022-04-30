@@ -1,10 +1,40 @@
-# OA Progression MR
+# oaprmr - Osteoarthritis Progression Prediction from MR data
 
-Source code accompanying ISBI 2022 publication "Predicting Knee Osteoarthritis Progression from Structural MRI using Deep Learning" by Panfilov et al.
+Source code accompanying ISBI 2022 publication "Predicting Knee Osteoarthritis Progression
+from Structural MRI using Deep Learning" by Panfilov et al., https://arxiv.org/abs/2201.10849.
 
-**The code will be uploaded close to the conference dates (March 28th-31st, 2022).**
+### Description
 
----
+1. The code requires the OAI Baseline/00m dataset - textual variables and SAG 3D DESS MR
+ images.
+
+2. Create a Conda environment from `environment.yml`. Install the code as a Python module.
+
+3. See `entry/runner.sh` for the complete workflow.
+ 
+4. The structure of the original project is as follows:
+    ```
+    ./project/  # preprocessed scans and variables
+      | data/
+        | OAI_Clin_prep/
+          | meta_base.csv
+        | OAI_SAG_3D_DESS_prep/
+        | OAI_XR_PA_prep/
+      | src/ (this repository)
+      | results/  # model weights, intermediate and final results 
+        | experiment_0/
+          | weights/
+          | ...
+        | experiment_1/
+        | ...
+    ```
+
+### Legal aspects
+
+This code is freely available for research purposes.
+
+The software has not been certified as a medical device and, therefore, must not be used
+for diagnostic purposes in a real clinical scenario.
 
 ### Cite this work
 

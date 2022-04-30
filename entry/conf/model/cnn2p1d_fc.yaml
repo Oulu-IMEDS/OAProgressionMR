@@ -1,0 +1,11 @@
+# @package model
+
+name: ResNet2P1D50
+input_size: None
+downscale: false
+input_channels: 1
+output_channels: 3
+pretrained: false
+path_pretrained:
+restore_weights: false
+debug: false

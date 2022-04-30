@@ -1,0 +1,22 @@
+# @package model
+
+name: MRCnnLstm
+input_size: None
+downscale: false
+input_channels: 1
+output_channels: 3
+fe:
+  arch: resnet50
+  pretrained: true
+  with_gap: true
+  dropout: 0.0
+agg:
+  hidden_size: 256
+  num_layers: 2
+  dropout: 0.1
+  with_tokens: false
+pretrained: false
+path_pretrained:
+restore_weights: false
+debug: false
+device: cuda

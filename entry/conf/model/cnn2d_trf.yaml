@@ -1,0 +1,24 @@
+# @package model
+
+name: MRCnnTrf
+input_size: None
+downscale: false
+input_channels: 1
+output_channels: 3
+fe:
+  arch: resnet50
+  pretrained: true
+  with_gap: true
+  dropout: 0.0
+  dims_view: rc
+agg:
+  num_slices: None
+  depth: 4
+  heads: 8
+  emb_dropout: 0.1
+  mlp_dim: 2048
+  mlp_dropout: 0.1
+pretrained: false
+path_pretrained:
+restore_weights: false
+debug: false

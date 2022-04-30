@@ -1,0 +1,19 @@
+# @package model
+
+name: XRCnn
+input_size: None
+downscale: false
+input_channels: 1
+output_channels: 3
+fe:
+  arch: resnext50_32x4d
+  pretrained: true
+  with_gap: true
+  dropout: 0.0
+agg:
+  hidden_size: 512
+  dropout: 0.5
+pretrained: false
+path_pretrained:
+restore_weights: false
+debug: false

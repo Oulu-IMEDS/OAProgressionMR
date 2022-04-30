@@ -1,0 +1,75 @@
+path_project_root:
+path_data_root: ${path_project_root}/data
+experiment_id: ${now:%y%m%d_%H%M}_temp
+path_experiment_root: ${path_project_root}/results/${experiment_id}
+path_logs: ${path_experiment_root}/logs
+
+hydra:
+  run:
+    dir: ${path_experiment_root}/hydra
+
+defaults:
+  - model:
+
+data:
+  modals_all:
+    - clin
+    - sag_3d_dess
+    - xr_pa
+  sets:
+    n0:
+      name: oai
+      modals: None
+      frac_classw: 1.0
+  target: tiulpin2019_prog
+  ignore_cache: false
+  debug: false
+
+training:
+  loss:
+    name: FocalLoss
+    params:
+      reduction: mean
+      gamma: 2.0
+  optim:
+    name: Adam
+    lr_init: 1e-4
+    weight_decay: 1e-4
+  sched:
+    name: CustomWarmupStaticDecayLR
+    params:
+      epochs_warmup: 5
+      epochs_static: 100
+      epochs_decay: 1
+#      decay_factor: 0.9
+  batch_size: 8
+  epochs:
+    num: 100
+  folds:
+    num: 5
+    idx: -1
+    ignore:
+  mixup:
+    alpha: 0
+
+validation:
+  criterion: avg_precision
+  batch_size: 16
+
+testing:
+  batch_size: 16
+  folds:
+    idx: -1
+    ignore:
+  use_cached: false
+  metrics_foldw: true
+  ensemble_foldw: true
+  metrics_ensemble: true
+  profile: none
+
+num_workers: 32
+
+seed_trainval_test: 0
+seed_train_val: 0
+scheme_train_val: strat_target
+site_test: D
