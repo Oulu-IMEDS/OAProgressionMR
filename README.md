@@ -1,14 +1,13 @@
 # oaprmr - Osteoarthritis Progression Prediction from MR data
 
-Source code accompanying ISBI 2022 publication "Predicting Knee Osteoarthritis Progression
-from Structural MRI using Deep Learning" by Panfilov et al., https://arxiv.org/abs/2201.10849:
+Source code accompanying ISBI 2022 publication, https://arxiv.org/abs/2201.10849:
 
 <p align="center">
-<img src="doc/pic_title.png" width="500" alt="Title"/> 
+<img src="doc/pic_title.png" width="700" alt="Title"/> 
 </p>
 
 <p align="center">
-<img src="doc/pic_fig1.png" width="600" alt="Method summary"/> 
+<img src="doc/pic_fig1.png" width="700" alt="Method summary"/> 
 </p>
 
 ### Description
