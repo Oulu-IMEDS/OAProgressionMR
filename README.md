@@ -46,12 +46,12 @@ for diagnostic purposes in a real clinical scenario.
 ### Cite this work
 
 ```
-@article{panfilov2022predicting,
-  title={Predicting Knee Osteoarthritis Progression from Structural MRI using Deep Learning}, 
-  author={Egor Panfilov and Simo Saarakkala and Miika T. Nieminen and Aleksei Tiulpin},
+@inproceedings{panfilov2022predicting,
+  title={Predicting Knee Osteoarthritis Progression from Structural {MRI} Using Deep Learning},
+  author={Panfilov, Egor and Saarakkala, Simo and Nieminen, Miika T and Tiulpin, Aleksei},
+  booktitle={2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--5},
   year={2022},
-  eprint={2201.10849},
-  archivePrefix={arXiv},
-  primaryClass={eess.IV}
+  organization={IEEE}
 }
 ```
