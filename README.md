@@ -21,8 +21,8 @@ Source code accompanying ISBI 2022 publication, https://arxiv.org/abs/2201.10849
  
 4. The structure of the original project is as follows:
     ```
-    ./project/  # preprocessed scans and variables
-      | data/
+    ./project/
+      | data/  # preprocessed scans and variables
         | OAI_Clin_prep/
           | meta_base.csv
         | OAI_SAG_3D_DESS_prep/
